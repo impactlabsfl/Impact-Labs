@@ -19,6 +19,9 @@ import {
   Heart,
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import CustomerReviews from './CustomerReviews';
+
+const WARRANTY_URL = 'https://warranty.impactlabsfl.com';
 
 /* ─── Announcement Bar ─── */
 function AnnouncementBar() {
@@ -52,6 +55,8 @@ function SiteNav() {
             Catalog
           </a>
           <div className="hidden md:flex items-center gap-8">
+            <a href={WARRANTY_URL} className="transition-colors duration-300 hover:text-white">Register Warranty</a>
+            <a href="#reviews" className="transition-colors duration-300 hover:text-white">Reviews</a>
             <a href="#benefits" className="transition-colors duration-300 hover:text-white">
               Why Impact Labs
             </a>
@@ -70,6 +75,9 @@ function SiteNav() {
         >
           Shop Now
         </a>
+      </div>
+      <div className="flex justify-center border-t border-white/10 py-2 md:hidden">
+        <a href={WARRANTY_URL} className="text-xs font-semibold text-hidow-blue">Register your warranty / Registrar garantía</a>
       </div>
     </nav>
   );
@@ -92,6 +100,8 @@ function SiteFooter() {
           &copy; {new Date().getFullYear()} Impact Labs Recovery &amp; Wellness. All rights reserved.
         </p>
         <div className="flex gap-6 text-xs text-white/25">
+          <a href={WARRANTY_URL} className="transition-colors hover:text-hidow-blue">Register Warranty</a>
+          <a href="#reviews" className="transition-colors hover:text-hidow-blue">Leave a review</a>
           <a href="#" className="transition-colors hover:text-hidow-blue">Privacy</a>
           <a href="#" className="transition-colors hover:text-hidow-blue">Terms</a>
         </div>
@@ -519,6 +529,22 @@ export default function App() {
       {/* ═══════════════════════════════════════════
           LOCATION & CONTACT
       ═══════════════════════════════════════════ */}
+      <section id="product-videos" className="border-t border-white/10 bg-black px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm font-bold uppercase tracking-widest text-hidow-blue">Explore Impact Labs</p>
+          <h2 className="mb-10 text-3xl font-black sm:text-5xl">Meet your next recovery routine.</h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <article className="overflow-hidden border border-white/15 bg-zinc-950">
+              <video controls playsInline preload="metadata" className="aspect-video w-full bg-black" aria-label="Impact Labs massage gun promotional video"><source src="/videos/massage-gun.mp4" type="video/mp4"/><a href="/videos/massage-gun.mp4">Watch massage gun video</a></video>
+              <div className="p-6"><h3 className="text-2xl font-bold">Percussion recovery.</h3><p className="mt-3 leading-relaxed text-white/60">Explore our massage gun, then visit our Orlando stand to try it for yourself.</p><a href="/catalog.html" className="mt-5 inline-block font-bold text-hidow-blue">Explore massage guns →</a></div>
+            </article>
+            <article className="overflow-hidden border border-white/15 bg-zinc-950">
+              <video controls playsInline preload="metadata" className="aspect-video w-full bg-black" aria-label="Impact Labs custom insoles promotional video"><source src="/videos/custom-insoles.mp4" type="video/mp4"/><a href="/videos/custom-insoles.mp4">Watch custom insoles video</a></video>
+              <div className="p-6"><h3 className="text-2xl font-bold">Custom insoles.</h3><p className="mt-3 leading-relaxed text-white/60">Visit our stand to learn about our custom insoles and see the available products.</p><p className="mt-3 text-sm text-white/50">Conceptual visualization. Actual insoles may differ.</p><a href="#location" className="mt-5 inline-block font-bold text-hidow-blue">Visit our Orlando stand →</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
       <section id="location" className="relative py-24 lg:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-zinc-950" />
         <div className="absolute -left-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 bg-hidow-blue/[0.05] blur-[120px] rounded-full" />
@@ -704,6 +730,37 @@ export default function App() {
         </div>
       </section>
 
+      <section id="warranty" className="scroll-mt-52 border-t border-white/10 bg-zinc-950 px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <ShieldCheck className="mb-6 text-hidow-blue" size={36} aria-hidden="true" />
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-hidow-blue">Here after your purchase</p>
+            <h2 className="text-3xl font-black sm:text-5xl">Your device. Your warranty.</h2>
+            <p className="mt-5 max-w-lg leading-relaxed text-white/60">Register your Impact Labs product through our warranty portal. Have your purchase details ready and follow the registration steps.</p>
+            <p lang="es" className="mt-3 text-sm text-white/50">Registra tu producto y consulta la información de tu garantía en nuestro portal.</p>
+          </div>
+          <div className="border border-hidow-blue/30 bg-hidow-blue/5 p-8 sm:p-10">
+            <h3 className="text-xl font-bold">Keep your purchase details together.</h3>
+            <p className="mt-4 text-sm leading-relaxed text-white/60">Use the registration form to submit your product and purchase information. Review the applicable warranty terms in the portal.</p>
+            <a href={WARRANTY_URL} className="mt-7 inline-flex items-center justify-center gap-3 bg-hidow-blue px-6 py-4 text-sm font-bold text-black transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-hidow-blue">Register warranty <ArrowRight size={18} aria-hidden="true" /></a>
+          </div>
+        </div>
+      </section>
+      <section id="reviews" className="scroll-mt-52 border-t border-white/10 bg-black px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-center">
+          <div className="max-w-xl">
+            <MessageCircle size={32} className="mb-6 text-hidow-blue" aria-hidden="true" />
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-hidow-blue">Your experience matters</p>
+            <h2 className="text-3xl font-black sm:text-4xl">Tell us how we did.</h2>
+            <p className="mt-5 leading-relaxed text-white/60">Tried a device or visited our Orlando stand? Share your experience with the Impact Labs team.</p>
+            <p lang="es" className="mt-3 text-sm text-white/50">Cuéntanos cómo fue tu experiencia con nuestro producto o servicio.</p>
+          </div>
+          <a href={`${WARRANTY_URL}/reviews`} className="inline-flex shrink-0 items-center justify-center gap-3 border border-hidow-blue px-8 py-4 font-bold text-hidow-blue transition hover:bg-hidow-blue hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-hidow-blue">Leave a review <ArrowRight size={18} aria-hidden="true" /></a>
+        </div>
+        <CustomerReviews />
+        </div>
+      </section>
       <SiteFooter />
     </div>
   );
