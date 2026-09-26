@@ -170,10 +170,10 @@ export default function App() {
       badge: 'BEST SELLER',
     },
     {
-      name: 'HiDow XPDS 18',
+      name: 'HiDow XPD 12',
       category: 'TENS/EMS Device',
-      price: '$499.99',
-      image: '/assets/images/Tens-pad18-1.jpg',
+      price: '$399.99',
+      image: '/assets/images/Tens-pad-1.jpg',
       badge: 'PRO',
     },
   ];
@@ -287,7 +287,7 @@ export default function App() {
               style={{ clipPath: 'polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%)' }}
             >
               <img
-                src="/impact-labs-hero-2.jpg"
+                src="/assets/images/impact-gun-studio.jpg"
                 alt="Impact Labs Percussion Massage Gun"
                 className="relative w-full h-auto"
               />
@@ -536,11 +536,11 @@ export default function App() {
           <h2 className="mb-10 text-3xl font-black sm:text-5xl">Meet your next recovery routine.</h2>
           <div className="grid gap-8 lg:grid-cols-2">
             <article className="overflow-hidden border border-white/15 bg-zinc-950">
-              <video controls playsInline preload="metadata" className="aspect-video w-full bg-black" aria-label="Impact Labs massage gun promotional video"><source src="/videos/massage-gun.mp4" type="video/mp4"/><a href="/videos/massage-gun.mp4">Watch massage gun video</a></video>
+              <video controls playsInline preload="metadata" poster="/assets/images/massage-gun-preview.jpg" className="aspect-video w-full bg-black" aria-label="Impact Labs massage gun promotional video"><source src="/videos/massage-gun.mp4" type="video/mp4"/><a href="/videos/massage-gun.mp4">Watch massage gun video</a></video>
               <div className="p-6"><h3 className="text-2xl font-bold">Percussion recovery.</h3><p className="mt-3 leading-relaxed text-white/60">Explore our massage gun, then visit our Orlando stand to try it for yourself.</p><a href="/catalog.html" className="mt-5 inline-block font-bold text-hidow-blue">Explore massage guns →</a></div>
             </article>
             <article className="overflow-hidden border border-white/15 bg-zinc-950">
-              <video controls playsInline preload="metadata" className="aspect-video w-full bg-black" aria-label="Impact Labs custom insoles promotional video"><source src="/videos/custom-insoles.mp4" type="video/mp4"/><a href="/videos/custom-insoles.mp4">Watch custom insoles video</a></video>
+              <video controls playsInline preload="metadata" poster="/assets/images/custom-insoles-preview.jpg" className="aspect-video w-full bg-black" aria-label="Impact Labs custom insoles promotional video"><source src="/videos/custom-insoles.mp4" type="video/mp4"/><a href="/videos/custom-insoles.mp4">Watch custom insoles video</a></video>
               <div className="p-6"><h3 className="text-2xl font-bold">Custom insoles.</h3><p className="mt-3 leading-relaxed text-white/60">Visit our stand to learn about our custom insoles and see the available products.</p><p className="mt-3 text-sm text-white/50">Conceptual visualization. Actual insoles may differ.</p><a href="#location" className="mt-5 inline-block font-bold text-hidow-blue">Visit our Orlando stand →</a></div>
             </article>
           </div>
