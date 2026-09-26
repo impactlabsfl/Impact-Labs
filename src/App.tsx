@@ -76,8 +76,9 @@ function SiteNav() {
           Shop Now
         </a>
       </div>
-      <div className="flex justify-center border-t border-white/10 py-2 md:hidden">
-        <a href={WARRANTY_URL} className="text-xs font-semibold text-hidow-blue">Register your warranty / Registrar garantía</a>
+      <div className="grid grid-cols-2 border-t border-white/10 md:hidden">
+        <a href={WARRANTY_URL} className="flex min-h-12 items-center justify-center px-2 py-2 text-center text-xs font-semibold text-hidow-blue">Warranty / Garantía</a>
+        <a href={`${WARRANTY_URL}/reviews`} className="flex min-h-12 items-center justify-center border-l border-white/10 bg-hidow-blue/10 px-2 py-2 text-center text-xs font-bold text-hidow-blue">Write a review / Dejar reseña</a>
       </div>
     </nav>
   );
